@@ -1,0 +1,185 @@
+*{
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;  /*this makes sure that photos will never be larger than their container for smaller devices*/
+  height: auto;
+}
+
+body{
+  margin: 0;
+  font-family: Courier, Monaco, monospace;
+  text-align: center;
+}
+
+.container{
+  width: 95%;
+  margin: 0 auto;
+}
+
+/*Typography///////////////////////*/
+
+h1 {
+  font-weight: 300;
+  font-size: 1.7rem;
+}
+
+@media (min-width:60rem) {
+  .title{
+    font-size: 3.7rem;
+  }
+}
+
+.title{
+  font-size:  2.5rem;
+  margin-bottom: 1.5em;
+}
+
+.title span{
+  font-weight: 300;
+  font-size: :0.9em;
+}
+
+ .button{
+  display:inline-block;/*makes sure the button does not add space to the page*/
+  font-size: 1.5rem;
+  text-decoration: none; /*removes inderline from hyperlink*/
+  text-transform: uppercase;
+  border-width: 2px;
+  border-style: solid;
+  padding: 0.5em 1.75em;
+ }
+
+ .button-accent{
+   color:#0090e2;
+   border-color: #0090e2; /*make the border stay the same color when clicking the button*/
+ }
+
+ .button-accent:hover,
+ .button-accent:focus{
+   background: #0090e2;
+   color:#FFF;
+ }
+
+@media (min-width:60rem) {
+  .button{
+    font-size: 1.5rem; /*when the font gets bigger so does the button*/
+  }
+}
+/*Header///////////////////////*/
+header{
+  position: absolute; /*allows the header to sit on top of the next section*/
+  width:95%;
+
+}
+header img{
+  margin:-5em 0em -11em;
+  width:16em;
+  height:auto;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  list-style:none;
+}
+
+nav li{
+  display:inline-block; /*displays the list horozontal*/
+  margin: 1em;
+}
+
+nav a{
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .8rem;
+  padding:.75em; /*To make the clickable area larger for mobile users*/
+  background:pink;
+  color:#FFF;
+}
+
+nav a:hover,
+nav a:focus{
+  color:#CCC;
+}
+
+@media (min-width:60rem) {
+  .logo{
+    float:left;
+  }
+
+  nav{
+    float: right;
+  }
+}
+
+/*Home hero///////////////////////*/
+
+.home-hero{
+  background-image: url(Photos/Lux_0.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 10em 0;
+  color: #fff;
+}
+
+@media (min-width: 60rem) {
+  .home-hero{
+    height: 100vh;
+    padding-top: 35vh;
+  }
+}
+.container{
+  margin:0;
+  padding: 0;
+}
+
+.home-about-textbox {
+background-color: #232323;
+padding: 3em;
+outline: 2px solid #00ff6c;
+outline-offset: -2.5em;
+color:white;
+position: relative;
+padding-top: 4.5em;
+top:-8.5em;
+box-shadow: 0 0 4em 0 rgba(0,0,0,.9);
+padding: 4em;
+}
+
+.home-about-textbox h1{
+  color: #00ff6c;
+position: absolute;
+top: -.6em;
+background: #232323;
+left: 50%;
+transform: translateX(-50%);
+padding: .25em;
+}
+/* makes sure the text scales as the window gets smaller to prevent wrapping at smaller screens*/
+@media (min-width: 23rem) {
+  h1{
+    font-size: 2rem;
+  }
+  .home-about-textbox h1{
+    top: -.4em;
+  }
+}
+@media (min-width:60rem) {
+  .home-about{
+  background-image:
+  url(Photos/Karma_0.jpg);
+  padding-bottom: 10em;
+  padding-top: 5em;
+  padding-left: 3em;
+
+  background-repeat: no-repeat;
+
+  }
+  .home-about-textbox{
+    width: 50%;
+text-align: justify;
+  }
+}
